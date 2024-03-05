@@ -15,7 +15,6 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::with('user')->get();
-        // dd($books);
 
         return view('book', compact(["books"]));
     }
